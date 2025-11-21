@@ -11,6 +11,11 @@
 
 ## FINDXR INTRODUCTION
 
+```
+4exYvseeGDUenhsiWt652f5Xq5B5Sk9hsBQ6Z6fJpump
+```
+
+
 In the on-chain world, entering a new market is equivalent to deploying capital into a system whose parameters are constantly shifting.
 Price acts as the current, sentiment as the weather, and liquidity as the tide—
 and each decision can strengthen your position or expose you to immediate downside risk.
