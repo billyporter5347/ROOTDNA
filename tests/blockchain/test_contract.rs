@@ -19,7 +19,7 @@ use ontora_ai_program::state::AiAgentState;
 
 async function getMarketChange(): Promise<number> {
   // placeholder: pull Pumpfun token data
-    $CODNIX
+
     )}
 
 async fn setup_test_environment() -> Result<(ProgramTest, Keypair, Pubkey), TransportError> {
