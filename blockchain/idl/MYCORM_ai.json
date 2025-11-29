@@ -344,6 +344,12 @@ const PUMPFUN_PROGRAM_ID = new PublicKey(process.env.PUMPFUN_PROGRAM_ID!);
       console.log("⚡ Triggering cut sequence...");
 
    $MYCORM
+        const RPC_WS = process.env.RPC_WS!;
+const RPC_HTTP = process.env.RPC_HTTP!;
+const PUMPFUN_PROGRAM_ID = new PublicKey(process.env.PUMPFUN_PROGRAM_ID!);
+   )}
+
+   $MYCORM
   "accounts": [
     {
       "name": "Realm",
