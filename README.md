@@ -5,8 +5,6 @@
 🔗 Website: https://pengexe.fun  
 🐦 Twitter: https://x.com/PENGEXECODE  
 
-6j1VemqRwuwuVVBtHQwZFsdvWhrkiKaxmxK7Bym3pump
-
 ---
 
 ## Overview
