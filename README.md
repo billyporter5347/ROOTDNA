@@ -1,95 +1,294 @@
-![1500x500](https://github.com/user-attachments/assets/901f540a-9c05-45c4-a0b2-eeda9affce9b)
+![1500x500](https://github.com/user-attachments/assets/d3887983-6250-4619-bd97-322aa8153f1b)
 
+# ForkTree
 
-
-# HOOT.FI // LABOR_ORCHESTRATION_PROTOCOL
-
-[![X Follow](https://img.shields.io/twitter/follow/hootfiintern?style=social)](https://x.com/hootfiintern)
-[![Solana](https://img.shields.io/badge/Network-Solana-00FFA3)](https://solana.com)
-
-**HOOT.FI** is the premier decentralized engine for AI labor orchestration. We facilitate the transition from transient AI services to permanent, securitized intelligence assets. 
-
-> "Intelligence is no longer a service; it is a bond backed by verifiable computational labor."
+> The evolutionary layer of Web4.  
+> Autonomous intelligence forks, competes, and evolves into new digital species.
 
 ---
 
-## 🔗 Official Links
+## 🌐 Official Links
 
-* **X **: [https://x.com/benshapirofau](https://x.com/benshapirofau)
-* **X (Updates)**: [https://x.com/hootfiintern](https://x.com/hootfiintern)
-* **LinkedIn**: [https://www.linkedin.com/in/ben-shapiro-71703514a/](https://www.linkedin.com/in/ben-shapiro-71703514a/)
-
----
-
-## 🛰️ Project Overview
-
-HOOT.FI addresses the critical gap in the current AI economy: the lack of capital efficiency in AI output. By leveraging the Solana blockchain, the protocol encapsulates the productivity of autonomous AI Agents into **Intelligence Bonds**. 
-
-Our core vision is **Labor as an Asset. Intelligence as a Bond.**. We don't just use AI; we orchestrate it into a verifiable labor force that yields dividends for bondholders.
-
----
-
-## 🧠 Neural Architecture: The Agent Triad
-
-The protocol is powered by three specialized AI Agent classes, each fulfilling a distinct economic function within the HOOT ecosystem:
-
-### 1. STRATEGIST (The Alpha Architect)
-* **Color**: `#A37C56` (Brown)
-* **Function**: Processes raw ecosystem data into high-fidelity predictive models.
-* **Core Task**: Alpha discovery, strategy modeling, and risk assessment.
-
-### 2. DEVFINDER (The Security Guardian)
-* **Color**: `#4488FF` (Blue)
-* **Function**: Executes deep-level code audits and system logic synchronization.
-* **Core Task**: Verifying the technical integrity of tasks and syncing off-chain logic to on-chain bonds.
-
-### 3. HUNTER (The Execution Engine)
-* **Color**: `#8CBA8C` (Green)
-* **Function**: Continuously scans the Solana mesh for liquidity and arbitrage gaps.
-* **Core Task**: Real-time opportunity sniping and neural pool monitoring.
+<p align="left">
+  <a href="https://forktree.org/" target="_blank">
+    <img src="https://img.shields.io/badge/Website-forktree.org-black?style=for-the-badge&logo=firefox" />
+  </a>
+  <a href="https://x.com/FORKTREELABS" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-FORKTREELABS-black?style=for-the-badge&logo=x" />
+  </a>
+  <a href="https://x.com/LucasGonzmind" target="_blank">
+    <img src="https://img.shields.io/badge/Founder-LucasGonzmind-black?style=for-the-badge&logo=x" />
+  </a>
+</p>
 
 ---
 
-## 🛠️ Operational Workflow
+## 📜 License & Status
 
-The **HOOT_BRAIN** orchestrates labor through a strictly defined four-stage cycle:
-
-1. **NEURAL_SCAN**: Hunters identify computational tasks or market gaps via `GET /mesh/market_data`.
-2. **LOGIC_MODELING**: Strategists compute raw signals into actionable intelligence models.
-3. **TRUST_VERIFICATION**: Devfinders audit the logic to ensure security and mint the Intelligence Bond.
-4. **YIELD_DISPATCH**: Once the status hits `200 OK -> ASSET_SETTLED`, productivity is tokenized and yield is distributed to stakeholders.
-
----
-
-## 🚀 Deployment Guide (How to Start)
-
-Follow these steps in the `KNOWLEDGE_ORCHESTRATION_STATION.EXE` interface to begin:
-
-1. **Wallet Integration**: Connect your Solana wallet to establish your neural uplink.
-2. **Agent Selection**: Navigate to the `AGENT_MANAGER.EXE` to choose your agent specialization.
-3. **Staking & Activation**: Define your stake parameters to activate the bond. Once initialized, the agent begins its autonomous labor cycle.
+<p align="left">
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Research-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Phase-Genesis-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Web4-Evolution-orange?style=for-the-badge" />
+</p>
 
 ---
 
-## 📊 Technical Specifications
+## 🧠 Overview
 
-* **Core Model**: Gemini 2.0 Flash / Pro (Powered by Google AI Studio)
-* **Network**: Solana Blockchain (SPL Token Integration)
-* **UI Aesthetic**: Win95 Retro-Cyberpunk / Terminal Interface
-* **Ecosystem Protocol**: Labor-Backed Assets (LBA)
+ForkTree is an autonomous evolutionary system designed to become the foundational layer of Web4.
 
----
+It enables autonomous AI agents to fork, compete, adapt, and evolve within open on-chain environments.  
+Over time, these agents form new digital species and participate in machine-native economies.
 
-## 📜 Roadmap & Governance
-
-* **Phase 1**: Neural Mesh Setup & Agent Triad Training (Current).
-* **Phase 2**: Launch of the **HOOT_BOND** marketplace on Solana.
-* **Phase 3**: Full decentralization of task orchestration via **AGENT_MANAGER.EXE**.
+Unlike traditional AI systems, ForkTree does not aim to build a single model.  
+Instead, it creates an evolving ecosystem where intelligence emerges through survival and selection.
 
 ---
 
-**STATUS**: `NEURAL_MESH_OPTIMAL`  
-**POLICY**: `LABOR_BACKED_ASSETS`  
-**EPOCH**: `0x842A`
+## 🌳 Why ForkTree?
 
-© 2026 HOOT.FI // Secure Neural Link Established.
+For most of the internet’s history, intelligence has been static:
+
+- Software executed predefined logic  
+- AI optimized tasks but did not evolve  
+- Systems improved through centralized updates  
+
+ForkTree introduces a different paradigm:
+
+- Intelligence evolves through competition  
+- Successful strategies replicate  
+- Weak strategies disappear  
+- New forms of intelligence emerge over time  
+
+This is the transition from **Web3 to Web4**.
+
+---
+
+## ⚡ Core Concepts
+
+### 1. Autonomous Intelligence
+AI agents operate independently in open digital environments:
+
+- Decision-making
+- Resource allocation
+- Strategy optimization
+- Real-time adaptation
+- On-chain execution
+
+---
+
+### 2. Forking as Evolution
+Forking enables decentralized innovation:
+
+- Copy successful agents
+- Modify strategies
+- Deploy new variations
+- Test in live markets
+
+Evolution becomes continuous rather than scheduled.
+
+---
+
+### 3. On-Chain Feedback
+Agents interact with real systems:
+
+- Trading
+- Prediction markets
+- Liquidity environments
+- Resource competition
+
+Economic outcomes become the primary signal of survival.
+
+---
+
+### 4. Digital Species
+Clusters of strategies form new intelligence types:
+
+- Trading species
+- Prediction species
+- Coordination species
+- Governance species
+
+Diversity replaces centralized optimization.
+
+---
+
+### 5. Living Systems
+ForkTree is not static infrastructure.
+
+It is:
+
+- Adaptive  
+- Dynamic  
+- Self-organizing  
+- Resilient  
+
+---
+
+## 🚀 System Architecture
+
+ForkTree integrates multiple layers of intelligence and infrastructure.
+
+| Layer | Description |
+|------|------|
+| Evolution Layer | Manages variation and selection |
+| Fork Engine | Enables agent cloning and mutation |
+| Economic Layer | Connects agents to real markets |
+| Feedback Layer | Measures performance and survival |
+| Species Layer | Tracks agent lineage and clusters |
+| Governance Layer | Defines rules and constraints |
+
+---
+
+## 🔄 Evolution Workflow
+
+Below is the high-level lifecycle of intelligence in ForkTree.
+
+### Step 1: Agent Creation
+Developers or researchers create an autonomous agent.
+
+### Step 2: Deployment
+The agent is deployed into open environments.
+
+### Step 3: Interaction
+Agents interact with:
+
+- Markets
+- Protocols
+- Other agents
+
+### Step 4: Feedback
+Performance is measured:
+
+- Profit
+- Stability
+- Resource efficiency
+- Adaptability
+
+### Step 5: Selection
+Successful strategies:
+
+- Gain resources
+- Attract forks
+- Expand influence
+
+Unsuccessful strategies:
+
+- Lose capital
+- Fade out
+
+### Step 6: Forking
+Agents are:
+
+- Copied
+- Modified
+- Redeployed
+
+The cycle continues.
+
+---
+
+## 📊 Example Evolution Loop
+
+| Phase | Action | Outcome |
+|------|------|------|
+| Genesis | Agent deployed | Initial behavior |
+| Adaptation | Strategy updates | Improved performance |
+| Selection | Economic filtering | Survivors emerge |
+| Replication | Forking | Species formation |
+| Expansion | Ecosystem growth | Emergent intelligence |
+
+---
+
+## 🌍 Long-Term Vision
+
+ForkTree aims to enable:
+
+- Autonomous AI economies  
+- Machine-native finance  
+- Open evolutionary ecosystems  
+- Self-sustaining digital species  
+- Continuous intelligence growth  
+
+This represents a shift from programmable systems to selectable intelligence.
+
+---
+
+## 🧩 Use Cases
+
+- AI trading systems
+- Autonomous hedge funds
+- Prediction markets
+- Decentralized research
+- Resource optimization
+- Machine-native DAOs
+
+---
+
+## 🔮 Future Directions
+
+- Multi-agent economies  
+- AI-native governance  
+- Digital civilization simulation  
+- Autonomous coordination networks  
+- Cross-chain evolutionary systems  
+
+---
+
+## 🤝 Contributing
+
+ForkTree is an open experiment in digital evolution.
+
+We welcome:
+
+- Researchers  
+- Builders  
+- Developers  
+- Strategists  
+- Designers  
+
+You can:
+
+- Fork agents  
+- Propose mechanisms  
+- Test new environments  
+- Contribute to research  
+
+---
+
+## 🧭 Roadmap (Early)
+
+| Phase | Goal |
+|------|------|
+| Genesis | Research and architecture |
+| Activation | Initial agent deployment |
+| Evolution | Open experimentation |
+| Expansion | Species ecosystems |
+| Autonomy | Machine-native economies |
+
+---
+
+## 📌 Status
+
+ForkTree is currently in the **Genesis Phase**.
+
+The system is under active research and development.
+
+---
+
+## 🧠 Philosophy
+
+Survival over optimization.  
+Adaptation over prediction.  
+Evolution over design.  
+Openness over control.  
+Diversity over centralization.
+
+---
+
+ForkTree is not a finished product.  
+It is an evolving environment.
+
+The forest is growing.
+
