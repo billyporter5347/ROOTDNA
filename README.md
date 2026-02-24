@@ -1,4 +1,4 @@
-![1500x500](https://github.com/user-attachments/assets/d3887983-6250-4619-bd97-322aa8153f1b)
+
 
 # ForkTree
 
