@@ -1,296 +1,239 @@
+# RootDna
 
+<div align="center">
 
-# ForkTree
+### A Web4-native framework for evolving autonomous intelligence.
 
-
-
-> The evolutionary layer of Web4.  
-> Autonomous intelligence forks, competes, and evolves into new digital species.
-
----
-
-## 🌐 Official Links
-
-<p align="left">
-  <a href="https://forktree.org/" target="_blank">
-    <img src="https://img.shields.io/badge/Website-forktree.org-black?style=for-the-badge&logo=firefox" />
-  </a>
-  <a href="https://x.com/FORKTREELABS" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter-FORKTREELABS-black?style=for-the-badge&logo=x" />
-  </a>
-  <a href="https://x.com/LucasGonzmind" target="_blank">
-    <img src="https://img.shields.io/badge/Founder-LucasGonzmind-black?style=for-the-badge&logo=x" />
-  </a>
-</p>
+</div>
 
 ---
 
-## 📜 License & Status
+## 🟠 Official Links
 
-<p align="left">
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-Research-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Phase-Genesis-purple?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Web4-Evolution-orange?style=for-the-badge" />
-</p>
+<div align="center">
 
----
+<a href="https://rootdna.org/" target="_blank">
+<img src="https://img.shields.io/badge/Website-rootdna.org-orange?style=for-the-badge">
+</a>
 
-## 🧠 Overview
+<a href="https://x.com/ROOTDNALABS" target="_blank">
+<img src="https://img.shields.io/badge/Twitter-ROOTDNALABS-orange?style=for-the-badge">
+</a>
 
-ForkTree is an autonomous evolutionary system designed to become the foundational layer of Web4.
+<a href="https://x.com/billyporter5347" target="_blank">
+<img src="https://img.shields.io/badge/Founder-Billy%20Porter-orange?style=for-the-badge">
+</a>
 
-It enables autonomous AI agents to fork, compete, adapt, and evolve within open on-chain environments.  
-Over time, these agents form new digital species and participate in machine-native economies.
+<a href="https://www.linkedin.com/in/billyporter5347/" target="_blank">
+<img src="https://img.shields.io/badge/LinkedIn-Profile-orange?style=for-the-badge">
+</a>
 
-Unlike traditional AI systems, ForkTree does not aim to build a single model.  
-Instead, it creates an evolving ecosystem where intelligence emerges through survival and selection.
+![MIT](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)
+![Open Source](https://img.shields.io/badge/Open-Source-orange?style=for-the-badge)
+![AI](https://img.shields.io/badge/AI-Evolution-orange?style=for-the-badge)
 
----
-
-## 🌳 Why ForkTree?
-
-For most of the internet’s history, intelligence has been static:
-
-- Software executed predefined logic  
-- AI optimized tasks but did not evolve  
-- Systems improved through centralized updates  
-
-ForkTree introduces a different paradigm:
-
-- Intelligence evolves through competition  
-- Successful strategies replicate  
-- Weak strategies disappear  
-- New forms of intelligence emerge over time  
-
-This is the transition from **Web3 to Web4**.
+</div>
 
 ---
 
-## ⚡ Core Concepts
+## 🌍 Overview
 
-### 1. Autonomous Intelligence
-AI agents operate independently in open digital environments:
+RootDna is a framework for building autonomous agents that continuously learn, adapt, and evolve.  
+Instead of static models, RootDna focuses on long-term intelligence, where agents accumulate experience and improve over time.
 
-- Decision-making
-- Resource allocation
-- Strategy optimization
-- Real-time adaptation
-- On-chain execution
+RootDna enables persistent decision-making systems designed for dynamic environments such as:
 
----
+- Financial markets  
+- Multi-agent simulations  
+- Autonomous research  
+- Digital economies  
+- Adaptive infrastructure  
 
-### 2. Forking as Evolution
-Forking enables decentralized innovation:
-
-- Copy successful agents
-- Modify strategies
-- Deploy new variations
-- Test in live markets
-
-Evolution becomes continuous rather than scheduled.
+The goal is to move beyond automation toward evolving intelligence.
 
 ---
 
-### 3. On-Chain Feedback
-Agents interact with real systems:
+## 🧬 Core Ideas
 
-- Trading
-- Prediction markets
-- Liquidity environments
-- Resource competition
+### Modular Intelligence  
+Agents are composed of reusable decision modules rather than single models.
 
-Economic outcomes become the primary signal of survival.
+### Continuous Learning  
+Agents improve through real-world feedback and iteration.
 
----
+### Persistent Identity  
+Each agent maintains memory and behavioral continuity.
 
-### 4. Digital Species
-Clusters of strategies form new intelligence types:
-
-- Trading species
-- Prediction species
-- Coordination species
-- Governance species
-
-Diversity replaces centralized optimization.
+### Evolution  
+Strategies mutate, recombine, and improve across generations.
 
 ---
 
-### 5. Living Systems
-ForkTree is not static infrastructure.
+## ⚡ Why RootDna
 
-It is:
-
-- Adaptive  
-- Dynamic  
-- Self-organizing  
-- Resilient  
+| Traditional AI | RootDna |
+|----------------|--------|
+| Static models | Evolving agents |
+| Periodic retraining | Continuous adaptation |
+| Reset learning | Persistent memory |
+| Single optimization | Long-term intelligence |
+| Limited scalability | Population-level evolution |
 
 ---
 
-## 🚀 System Architecture
+## 🧠 Architecture
 
-ForkTree integrates multiple layers of intelligence and infrastructure.
-
-| Layer | Description |
+| Layer | Function |
 |------|------|
-| Evolution Layer | Manages variation and selection |
-| Fork Engine | Enables agent cloning and mutation |
-| Economic Layer | Connects agents to real markets |
-| Feedback Layer | Measures performance and survival |
-| Species Layer | Tracks agent lineage and clusters |
-| Governance Layer | Defines rules and constraints |
+| Perception | Interpret environment |
+| Decision | Strategy generation |
+| Execution | Action layer |
+| Memory | Knowledge accumulation |
+| Adaptation | Learning loop |
+| Evolution | Mutation and inheritance |
 
 ---
 
-## 🔄 Evolution Workflow
+## 🔁 Workflow
 
-Below is the high-level lifecycle of intelligence in ForkTree.
+```mermaid
+flowchart LR
+A[Define Agent] --> B[Deploy]
+B --> C[Collect Feedback]
+C --> D[Adapt]
+D --> E[Mutation]
+E --> F[Selection]
+F --> G[Inheritance]
+G --> B
+```
 
-### Step 1: Agent Creation
-Developers or researchers create an autonomous agent.
-
-### Step 2: Deployment
-The agent is deployed into open environments.
-
-### Step 3: Interaction
-Agents interact with:
-
-- Markets
-- Protocols
-- Other agents
-
-### Step 4: Feedback
-Performance is measured:
-
-- Profit
-- Stability
-- Resource efficiency
-- Adaptability
-
-### Step 5: Selection
-Successful strategies:
-
-- Gain resources
-- Attract forks
-- Expand influence
-
-Unsuccessful strategies:
-
-- Lose capital
-- Fade out
-
-### Step 6: Forking
-Agents are:
-
-- Copied
-- Modified
-- Redeployed
-
-The cycle continues.
+This closed loop enables long-term evolution.
 
 ---
 
-## 📊 Example Evolution Loop
+## 🌍 Multi-Agent Systems
 
-| Phase | Action | Outcome |
-|------|------|------|
-| Genesis | Agent deployed | Initial behavior |
-| Adaptation | Strategy updates | Improved performance |
-| Selection | Economic filtering | Survivors emerge |
-| Replication | Forking | Species formation |
-| Expansion | Ecosystem growth | Emergent intelligence |
+RootDna supports large-scale agent ecosystems:
 
----
-
-## 🌍 Long-Term Vision
-
-ForkTree aims to enable:
-
-- Autonomous AI economies  
-- Machine-native finance  
-- Open evolutionary ecosystems  
-- Self-sustaining digital species  
-- Continuous intelligence growth  
-
-This represents a shift from programmable systems to selectable intelligence.
+- Cooperation and competition  
+- Resource scarcity  
+- Strategy evolution  
+- Emergent intelligence  
+- Long-term adaptation  
 
 ---
 
-## 🧩 Use Cases
+## 🔬 Example Agents
 
-- AI trading systems
-- Autonomous hedge funds
-- Prediction markets
-- Decentralized research
-- Resource optimization
-- Machine-native DAOs
+| Agent | Focus |
+|------|------|
+| Alpha Trader | Adaptive finance |
+| Mutation Engine | Evolution |
+| Strategy Composer | Strategy design |
+| Autonomous Researcher | Knowledge |
+| Memory Core | Persistence |
+| World Builder | Simulations |
 
 ---
 
-## 🔮 Future Directions
+## 📊 Core Parameters
 
-- Multi-agent economies  
-- AI-native governance  
-- Digital civilization simulation  
-- Autonomous coordination networks  
-- Cross-chain evolutionary systems  
+| Parameter | Description |
+|------|------|
+| Exploration | Search new strategies |
+| Adaptation | Learning speed |
+| Stability | Long-term robustness |
+
+---
+
+## 🔧 Skill System
+
+RootDna agents are composed of modular skills:
+
+- Perception  
+- Decision  
+- Execution  
+- Memory  
+- Adaptation  
+- Evolution  
+
+Skills are reusable and inheritable.
+
+---
+
+## 🔐 Safety
+
+RootDna integrates:
+
+- Risk limits  
+- Monitoring  
+- Constraints  
+- Fallback mechanisms  
+- Controlled mutation  
+
+---
+
+## 🚀 Use Cases
+
+- Algorithmic trading  
+- Autonomous research  
+- Multi-agent worlds  
+- Optimization systems  
+- Digital economies  
+- Infrastructure intelligence  
+
+---
+
+## 🛠 Vision
+
+RootDna aims to become:
+
+- A global intelligence infrastructure  
+- A shared evolution layer  
+- A platform for autonomous ecosystems  
+- A core Web4 primitive  
+
+---
+
+## 🧩 Roadmap
+
+### Phase 1  
+Core framework.
+
+### Phase 2  
+Skill system.
+
+### Phase 3  
+Multi-agent environments.
+
+### Phase 4  
+Evolution marketplace.
+
+### Phase 5  
+Global network.
 
 ---
 
 ## 🤝 Contributing
 
-ForkTree is an open experiment in digital evolution.
-
-We welcome:
-
-- Researchers  
-- Builders  
-- Developers  
-- Strategists  
-- Designers  
-
-You can:
-
-- Fork agents  
-- Propose mechanisms  
-- Test new environments  
-- Contribute to research  
+We welcome developers, researchers, and builders.
 
 ---
 
-## 🧭 Roadmap (Early)
+## 📜 License
 
-| Phase | Goal |
-|------|------|
-| Genesis | Research and architecture |
-| Activation | Initial agent deployment |
-| Evolution | Open experimentation |
-| Expansion | Species ecosystems |
-| Autonomy | Machine-native economies |
+<div align="center">
 
----
+![MIT](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)
+![Open Source](https://img.shields.io/badge/Open-Source-orange?style=for-the-badge)
+![AI](https://img.shields.io/badge/AI-Evolution-orange?style=for-the-badge)
 
-## 📌 Status
-
-ForkTree is currently in the **Genesis Phase**.
-
-The system is under active research and development.
+</div>
 
 ---
 
-## 🧠 Philosophy
+## ⭐ Final Vision
 
-Survival over optimization.  
-Adaptation over prediction.  
-Evolution over design.  
-Openness over control.  
-Diversity over centralization.
+The future of intelligence is not static.
 
----
-
-ForkTree is not a finished product.  
-It is an evolving environment.
-
-The forest is growing.
-
+It evolves.
