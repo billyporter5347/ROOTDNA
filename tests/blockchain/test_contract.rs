@@ -227,6 +227,13 @@ pub struct State {
     pub memory: Vec<f64>,
 }
 
+def test_predict_model_trained(self):
+        self.model.train(self.mock_data, self.mock_labels)
+        predictions = self.model.predict(self.mock_data)
+        self.assertEqual(len(predictions), len(self.mock_data))
+        self.assertTrue(all(pred == 0.5 for pred in predictions))
+    ）}
+
 impl State {
     pub fn apply_correction(&mut self, correction: f64) {
         self.current_delta += correction;
@@ -272,6 +279,8 @@ pub struct Holder {
           "docs": ["The Solana system program for account creation and rent."]
 
     )}
+
+    //
     
 async fn test_update_ai_agent_config() {
     let (program_test, payer, program_id) = setup_test_environment().await.unwrap();
