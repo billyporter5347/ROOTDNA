@@ -1,5 +1,3 @@
-# SKILL.md
-
 ## RootDna Skill System
 
 ### Overview
