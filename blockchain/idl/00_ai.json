@@ -34,7 +34,7 @@ async function main() {
   const modules = loadModules(["token", "staking", "governance"]);
   const project = composeProject(modules);
 
-        )}
+        )} 
 
     
           "name": "payer",
