@@ -1,5 +1,5 @@
 #!/bin/bash    
-# run_tests.sh
+# run_tests.sh 
 # Script to run all test suites across components with coverage reporting
 
 # Exit on any error to prevent partial execution
