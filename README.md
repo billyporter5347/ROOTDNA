@@ -6,6 +6,8 @@
 
 ### A Web4-native framework for evolving autonomous intelligence.
 
+https://pump.fun/coin/7ssjLaQZ5ZKjkb5bzCRoWXg5zJeQgXwzaecSdZnZpump
+
 </div>
 
 ---
