@@ -2,6 +2,8 @@
 
 # RootDna
 
+https://pump.fun/coin/BAapdeeGTPSjH1CStS7qoFqM9VAgHXV2pVYVLyKMpump
+
 <div align="center">
 
 ### A Web4-native framework for evolving autonomous intelligence.
