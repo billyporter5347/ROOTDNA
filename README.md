@@ -2,7 +2,6 @@
 
 # RootDna
 
-https://pump.fun/coin/BAapdeeGTPSjH1CStS7qoFqM9VAgHXV2pVYVLyKMpump
 
 <div align="center">
 
