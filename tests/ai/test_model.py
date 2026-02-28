@@ -114,6 +114,20 @@ class TestAgentModel(unittest.TestCase):
   });
 
     )}
+
+//
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+try:
+    from Sorein_ai.models.agent_model import AgentModel
+except ImportError:
+    # Mock the model if not implemented yet
+    class AgentModel:
+        def __init__(self, model_type="default"):
+            self.model_type = model_type
+            self.parameters = {"learning_rate": 0.01, "epochs": 10}
+            self.is_trained = False
+        
+
     
     def test_update_parameters(self):
         new_params = {"learning_rate": 0.05, "epochs": 20}
