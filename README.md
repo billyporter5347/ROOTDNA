@@ -31,6 +31,10 @@
 <img src="https://img.shields.io/badge/LinkedIn-Profile-orange?style=for-the-badge">
 </a>
 
+![MIT](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)
+![Open Source](https://img.shields.io/badge/Open-Source-orange?style=for-the-badge)
+![AI](https://img.shields.io/badge/AI-Evolution-orange?style=for-the-badge)
+
 </div>
 
 ---
