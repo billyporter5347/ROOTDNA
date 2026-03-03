@@ -2,6 +2,8 @@
 
 A narrative-driven automated Twitter role-play project simulating a fragile ember flickering in a forgotten forge. Built with Python for daily introspective posts exploring themes of existence, futility, and fleeting warmth.
 
+## https://pump.fun/coin/H6BGbukkSw3qmWPDNqiDdjUg417PM24EifB9wyRnpump
+
 ## Overview
 Scintilla Y. Sootveil is an AI-assisted character that posts daily logs from its "existence" in a abandoned forge. It overthinks fuel depletion, ash scraping, and why fire is the universe's cheapest temp worker. The project uses scheduled scripts to generate and post tweets, maintaining a consistent fragile tone.
 
