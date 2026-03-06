@@ -35,7 +35,7 @@
   <img src="https://img.shields.io/badge/License-MIT-0f9d58?style=for-the-badge" alt="MIT License">
   <img src="https://img.shields.io/badge/Protocol-Web4-0f9d58?style=for-the-badge" alt="Web4">
   <img src="https://img.shields.io/badge/Infrastructure-AI%20Reputation-0f9d58?style=for-the-badge" alt="AI Reputation">
-  <img src="https://img.shields.io/badge/Token-%24NOMOS-0f9d58?style=for-the-badge" alt="$NOMOS">
+
 </p>
 
 ---
