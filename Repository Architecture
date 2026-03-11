@@ -1,331 +1,333 @@
-# Nomos Repository Architecture
+
+# 🏗️ Verd.Bud Repository Architecture
 
 ## Overview
 
-This document describes the proposed repository architecture for the
-**Nomos Protocol**, a reputation infrastructure for autonomous agents
-operating in the Web4 AI economy.
+This document describes the complete architecture of the Verd.Bud protocol, covering system design, component relationships, data flows, and deployment infrastructure.
 
-The repository is designed with a modular structure to support:
+---
 
--   agent identity management
--   behavioral signal ingestion
--   reputation computation
--   API services
--   SDK integrations
--   developer tooling
--   protocol research
+## System Architecture
 
-The architecture follows common patterns used in modern AI and
-infrastructure repositories.
+### High-Level Architecture
 
-------------------------------------------------------------------------
-
-# Repository Layout
-
-    nomos/
-    │
-    ├── README.md
-    ├── LICENSE
-    ├── CONTRIBUTING.md
-    ├── CODE_OF_CONDUCT.md
-    ├── SECURITY.md
-    │
-    ├── docs/
-    │   ├── overview.md
-    │   ├── architecture.md
-    │   ├── protocol.md
-    │   ├── reputation-model.md
-    │   ├── agent-spec.md
-    │   ├── skill.md
-    │   └── integration.md
-    │
-    ├── protocol/
-    │   ├── identity/
-    │   │   ├── identity_manager.py
-    │   │   ├── identity_registry.py
-    │   │   └── validation.py
-    │   │
-    │   ├── trace/
-    │   │   ├── trace_ingestor.py
-    │   │   ├── event_schema.py
-    │   │   └── trace_storage.py
-    │   │
-    │   ├── reputation/
-    │   │   ├── reputation_engine.py
-    │   │   ├── scoring_model.py
-    │   │   ├── signal_processor.py
-    │   │   └── risk_analysis.py
-    │   │
-    │   └── attestations/
-    │       ├── attestation_service.py
-    │       └── proof_generation.py
-    │
-    ├── services/
-    │   ├── api/
-    │   │   ├── server.py
-    │   │   ├── routes_identity.py
-    │   │   ├── routes_trace.py
-    │   │   └── routes_reputation.py
-    │   │
-    │   ├── ingestion/
-    │   │   ├── event_listener.py
-    │   │   └── event_pipeline.py
-    │   │
-    │   └── scheduler/
-    │       └── reputation_worker.py
-    │
-    ├── sdk/
-    │   ├── python/
-    │   │   ├── nomos_client.py
-    │   │   └── examples.py
-    │   │
-    │   └── typescript/
-    │       ├── nomos.ts
-    │       └── example.ts
-    │
-    ├── models/
-    │   ├── reputation_model.py
-    │   └── signal_features.py
-    │
-    ├── storage/
-    │   ├── database.py
-    │   ├── schema.sql
-    │   └── migrations/
-    │
-    ├── scripts/
-    │   ├── dev_setup.sh
-    │   ├── start_local.sh
-    │   └── seed_test_data.py
-    │
-    ├── tests/
-    │   ├── test_identity.py
-    │   ├── test_trace.py
-    │   ├── test_reputation.py
-    │   └── integration_tests.py
-    │
-    └── infra/
-        ├── docker/
-        │   └── Dockerfile
-        ├── compose/
-        │   └── docker-compose.yml
-        └── deployment/
-            └── deploy.sh
-
-------------------------------------------------------------------------
-
-# Core Modules
-
-## Identity Module
-
-Responsible for creating and managing persistent identities for
-autonomous agents.
-
-Key responsibilities:
-
--   agent registration
--   metadata validation
--   wallet binding
--   identity lookup
-
-Example interface:
-
-``` python
-class IdentityManager:
-
-    def register_identity(self, metadata, wallet):
-        agent_id = self.generate_agent_id(metadata)
-        self.store_identity(agent_id, metadata, wallet)
-        return agent_id
-
-    def get_identity(self, agent_id):
-        return self.identity_registry.fetch(agent_id)
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                        VERD.BUD PROTOCOL                             │
+│                                                                      │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐              │
+│  │   FRONTEND    │  │  OFF-CHAIN   │  │   ON-CHAIN   │              │
+│  │              │  │   RUNTIME    │  │   PROTOCOL   │              │
+│  │  Landing page │  │              │  │              │              │
+│  │  Explorer     │  │  Agent cores │  │  Contracts   │              │
+│  │  Dashboard    │  │  Memory mgmt │  │  State mgmt  │              │
+│  │              │  │  Inference   │  │  Governance   │              │
+│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘              │
+│         │                  │                  │                      │
+│         └──────────────────┼──────────────────┘                      │
+│                            │                                         │
+│                   ┌────────┴────────┐                                │
+│                   │   DATA LAYER     │                                │
+│                   │                  │                                │
+│                   │  Distributed     │                                │
+│                   │  storage         │                                │
+│                   │  Indexing         │                                │
+│                   │  Oracle feeds     │                                │
+│                   └──────────────────┘                                │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
-------------------------------------------------------------------------
+---
 
-# Trace Module
+## Component Architecture
 
-Handles ingestion and storage of behavioral signals submitted by agents
-or external systems.
+### On-Chain Components
 
-Signals may include:
+The protocol's on-chain logic is organized into five core modules:
 
--   task execution
--   interactions
--   economic activity
--   collaboration events
-
-Example ingestion pipeline:
-
-``` python
-class TraceIngestor:
-
-    def submit_event(self, event):
-        validated = self.validate_event(event)
-        self.trace_storage.store(validated)
-        return True
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                      ON-CHAIN PROTOCOL                           │
+│                                                                  │
+│  ┌────────────────────┐      ┌────────────────────┐            │
+│  │  Attention Oracle   │      │    Energy Pool      │            │
+│  │                    │      │                    │            │
+│  │  • Signal intake   │─────►│  • VRDE minting    │            │
+│  │  • Weight calc     │      │  • Bonding curve   │            │
+│  │  • Decay function  │      │  • Soulbound logic │            │
+│  │  • Score output    │      │  • Expiration      │            │
+│  └────────────────────┘      └─────────┬──────────┘            │
+│                                         │                       │
+│  ┌────────────────────┐      ┌─────────▼──────────┐            │
+│  │  Agent Registry     │      │  Reproduction Eng   │            │
+│  │                    │◄─────│                    │            │
+│  │  • NFT management  │      │  • Threshold check │            │
+│  │  • DNA storage     │      │  • DNA blending    │            │
+│  │  • Lineage tree    │      │  • VRF mutation    │            │
+│  │  • Pruning logic   │      │  • Bud minting     │            │
+│  │  • Status mgmt     │      │  • Cooldown mgmt   │            │
+│  └────────────────────┘      └────────────────────┘            │
+│                                                                  │
+│  ┌────────────────────────────────────────────────┐            │
+│  │              Governance Module                   │            │
+│  │                                                  │            │
+│  │  • Parameter proposals    • Vote tallying        │            │
+│  │  • Token-weighted voting  • Treasury management  │            │
+│  │  • Timelock execution     • Emergency controls   │            │
+│  └────────────────────────────────────────────────┘            │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-------------------------------------------------------------------------
+### Module Interaction Map
 
-# Reputation Engine
+| From → To | Interaction | Data Exchanged |
+|-----------|------------|----------------|
+| Attention Oracle → Energy Pool | Score submission | Agent ID, Attention Score, timestamp |
+| Energy Pool → Reproduction Engine | Energy balance query | Agent ID, VRDE balance |
+| Reproduction Engine → Agent Registry | DNA read + Bud mint | Parent DNA, Bud DNA, lineage pointers |
+| Agent Registry → Attention Oracle | Agent status check | Agent ID, active/pruned status |
+| Governance → All modules | Parameter updates | Parameter name, new value, execution delay |
 
-The reputation engine aggregates behavioral traces and computes trust
-indicators.
+---
 
-Core responsibilities:
+## Data Architecture
 
--   signal aggregation
--   reputation scoring
--   risk detection
--   behavioral consistency analysis
+### On-Chain State
 
-Example scoring engine:
-
-``` python
-class ReputationEngine:
-
-    def compute_score(self, agent_id):
-        signals = self.signal_processor.collect(agent_id)
-        score = self.scoring_model.evaluate(signals)
-        return score
+```
+┌─────────────────────────────────────────────────────────┐
+│                    ON-CHAIN STATE                         │
+│                                                          │
+│  Agent Registry:                                         │
+│  ┌─────────────────────────────────────────────────┐    │
+│  │ agent_id → {                                     │    │
+│  │   owner:           address                       │    │
+│  │   generation:      uint16                        │    │
+│  │   parent_a:        agent_id | null               │    │
+│  │   parent_b:        agent_id | null               │    │
+│  │   birth_block:     uint64                        │    │
+│  │   status:          enum(ACTIVE|COOLDOWN|...)     │    │
+│  │   last_reproduce:  uint64                        │    │
+│  │   quarterly_count: uint8                         │    │
+│  │   dna: {                                         │    │
+│  │     memory_hash:      bytes32                    │    │
+│  │     skill_vector:     int[8]                     │    │
+│  │     behavior_traits:  int[4]                     │    │
+│  │     reputation:       uint32                     │    │
+│  │     mutation_seed:    bytes32                     │    │
+│  │   }                                              │    │
+│  │ }                                                │    │
+│  └─────────────────────────────────────────────────┘    │
+│                                                          │
+│  Attention Scores:                                       │
+│  ┌─────────────────────────────────────────────────┐    │
+│  │ agent_id → {                                     │    │
+│  │   current_score:    uint64                       │    │
+│  │   last_updated:     uint64                       │    │
+│  │   signal_counts:    mapping(signal_type → count) │    │
+│  │ }                                                │    │
+│  └─────────────────────────────────────────────────┘    │
+│                                                          │
+│  Energy Balances:                                        │
+│  ┌─────────────────────────────────────────────────┐    │
+│  │ agent_id → {                                     │    │
+│  │   vrde_balance:     uint64                       │    │
+│  │   last_minted:      uint64                       │    │
+│  │   expiration:       uint64                       │    │
+│  │ }                                                │    │
+│  └─────────────────────────────────────────────────┘    │
+│                                                          │
+│  Governance:                                             │
+│  ┌─────────────────────────────────────────────────┐    │
+│  │ proposal_id → {                                  │    │
+│  │   proposer:         address                      │    │
+│  │   parameter:        string                       │    │
+│  │   new_value:        bytes                        │    │
+│  │   votes_for:        uint64                       │    │
+│  │   votes_against:    uint64                       │    │
+│  │   deadline:         uint64                       │    │
+│  │   executed:         bool                         │    │
+│  │ }                                                │    │
+│  └─────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────┘
 ```
 
-------------------------------------------------------------------------
+### Off-Chain State
 
-# API Services
-
-The API layer exposes protocol functionality for external systems.
-
-Endpoints may include:
-
-    POST /identity/register
-    POST /trace/submit
-    GET  /reputation/{agent_id}
-
-Example route:
-
-``` python
-@app.route("/identity/register", methods=["POST"])
-def register_identity():
-    metadata = request.json["metadata"]
-    wallet = request.json["wallet"]
-    agent_id = identity_manager.register_identity(metadata, wallet)
-    return {"agent_id": agent_id}
+```
+┌─────────────────────────────────────────────────────────┐
+│                   OFF-CHAIN STATE                         │
+│                                                          │
+│  Distributed Storage:                                    │
+│  ┌─────────────────────────────────────────────────┐    │
+│  │ memory_hash → {                                  │    │
+│  │   interaction_history:  [Interaction]             │    │
+│  │   learned_patterns:     [Pattern]                │    │
+│  │   context_accumulator:  ContextState             │    │
+│  │   task_records:         [TaskRecord]              │    │
+│  │   feedback_log:         [Feedback]                │    │
+│  │ }                                                │    │
+│  └─────────────────────────────────────────────────┘    │
+│                                                          │
+│  Agent Runtime State:                                    │
+│  ┌─────────────────────────────────────────────────┐    │
+│  │ agent_id → {                                     │    │
+│  │   llm_config:       ModelConfiguration           │    │
+│  │   tool_access:      [ToolPermission]             │    │
+│  │   prompt_template:  string                       │    │
+│  │   active_sessions:  [SessionState]               │    │
+│  │ }                                                │    │
+│  └─────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────┘
 ```
 
-------------------------------------------------------------------------
+---
 
-# SDK Layer
+## Repository File Structure
 
-SDKs allow developers to integrate agents with the Nomos protocol.
-
-Python example:
-
-``` python
-from nomos_client import NomosClient
-
-client = NomosClient("https://api.nomos.network")
-
-agent_id = client.register_identity(metadata, wallet)
-client.submit_trace(agent_id, events)
-profile = client.get_reputation(agent_id)
+```
+Verd.Bud-Attention/
+│
+├── index.html                      # Protocol landing page
+│                                    # Deployed to verdbud.tech via GitHub Pages
+│                                    # ASCII terminal aesthetic, single-file
+│                                    # Contains all HTML, CSS, JS inline
+│
+├── CNAME                           # GitHub Pages custom domain config
+│                                    # Content: "verdbud.tech"
+│
+├── README.md                       # Primary documentation
+│                                    # Project overview, architecture, workflows
+│                                    # Tables, ASCII diagrams, getting started
+│
+├── CODE_OF_CONDUCT.md              # Community standards
+│                                    # Based on Contributor Covenant v2.1
+│                                    # Enforcement guidelines and reporting
+│
+├── CONTRIBUTING.md                  # How to contribute
+│                                    # Branch naming, commit conventions
+│                                    # PR process, coding standards
+│
+├── LICENSE.md                       # MIT License
+│                                    # Open source, permissive
+│
+├── SECURITY.md                     # Security policy
+│                                    # Vulnerability reporting process
+│                                    # Component-level risk analysis
+│                                    # Audit status and timeline
+│
+├── Skill.md                        # Agent skill system
+│                                    # 8-dimensional skill vector spec
+│                                    # Inheritance mechanics
+│                                    # Specialization dynamics
+│
+├── agent-spec.md                   # Agent DNA specification
+│                                    # Complete DNA structure
+│                                    # State machine
+│                                    # Runtime architecture
+│                                    # Lifecycle transitions
+│
+├── Repository Architecture          # This file
+│                                    # System design and component layout
+│
+└── assets/                         # Visual assets
+    ├── logo-dark.svg               # Logo for dark backgrounds
+    ├── logo-light.svg              # Logo for light backgrounds
+    ├── logo-icon.svg               # Icon-only logo (no text)
+    └── verdbud-banner.png          # Repository banner image
 ```
 
-------------------------------------------------------------------------
+---
 
-# Reputation Model
+## Deployment Architecture
 
-The reputation system combines multiple signals.
+### GitHub Pages Deployment
 
-Signals may include:
+```
+┌──────────────┐     push      ┌──────────────┐     build     ┌──────────────┐
+│  Local dev    │ ────────────► │   GitHub      │ ────────────► │  GitHub      │
+│              │               │   Repository  │               │  Pages CDN   │
+│  index.html  │               │   main branch │               │              │
+│  CNAME       │               │               │               │  verdbud.tech│
+└──────────────┘               └──────────────┘               └──────────────┘
 
--   task success rate
--   interaction reliability
--   economic activity
--   dispute ratio
+Flow:
+  1. Developer pushes to main branch
+  2. GitHub Pages detects change
+  3. Static files served from CDN
+  4. CNAME routes verdbud.tech to Pages
+  5. HTTPS certificate auto-managed by GitHub
 
-Example signal structure:
-
-``` python
-class ReputationSignals:
-
-    task_success_rate: float
-    interaction_reliability: float
-    economic_activity: float
-    dispute_penalty: float
+No build step required — index.html is served as-is.
 ```
 
-------------------------------------------------------------------------
+### DNS Configuration
 
-# Storage Layer
+```
+verdbud.tech DNS Records:
 
-The storage module manages persistence of:
+  Type    Host    Value                   Purpose
+  ─────   ────    ─────                   ───────
+  A       @       185.199.108.153         GitHub Pages IP
+  A       @       185.199.109.153         GitHub Pages IP
+  A       @       185.199.110.153         GitHub Pages IP
+  A       @       185.199.111.153         GitHub Pages IP
+  CNAME   www     austinfreel23.github.io  www subdomain redirect
+```
 
--   agent identities
--   behavioral traces
--   reputation scores
--   historical signals
+---
 
-Database schema may include:
+## Security Architecture
 
-    agents
-    events
-    interactions
-    reputation_scores
+```
+┌─────────────────────────────────────────────────────────┐
+│                   SECURITY LAYERS                        │
+│                                                          │
+│  ┌────────────────────────────────────────────────────┐ │
+│  │ Layer 1: IDENTITY                                   │ │
+│  │ • Proof-of-humanity for attention signals            │ │
+│  │ • Account age verification                          │ │
+│  │ • Staking requirements                              │ │
+│  └────────────────────────────────────────────────────┘ │
+│                                                          │
+│  ┌────────────────────────────────────────────────────┐ │
+│  │ Layer 2: ECONOMICS                                  │ │
+│  │ • Soulbound energy (no market manipulation)         │ │
+│  │ • 90-day expiration (no hoarding)                   │ │
+│  │ • Escalating reproduction costs                     │ │
+│  └────────────────────────────────────────────────────┘ │
+│                                                          │
+│  ┌────────────────────────────────────────────────────┐ │
+│  │ Layer 3: GENETICS                                   │ │
+│  │ • DNA diversity requirement (< 60% overlap)         │ │
+│  │ • Cooldown periods (14 days)                        │ │
+│  │ • Quarterly reproduction limits (max 3)             │ │
+│  └────────────────────────────────────────────────────┘ │
+│                                                          │
+│  ┌────────────────────────────────────────────────────┐ │
+│  │ Layer 4: SELECTION                                  │ │
+│  │ • Attention decay (t½ = 3.5 days)                   │ │
+│  │ • Multi-source signal validation                    │ │
+│  │ • Pruning (AS < 10 for 30d = death)                 │ │
+│  └────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────┘
+```
 
-------------------------------------------------------------------------
+---
 
-# Infrastructure
+## Future Architecture Extensions
 
-Nomos services are designed to run as containerized microservices.
+As the protocol matures through its roadmap phases, the architecture will expand:
 
-Example docker service:
+| Phase | New Components | Architecture Impact |
+|-------|---------------|-------------------|
+| **Seed** | Core contracts, Oracle v1, Genesis agents | Foundation layer established |
+| **Bud** | Reproduction engine, token contracts, lineage explorer | L3 layer activated, frontend expanded |
+| **Branch** | Agent SDK, matchmaking marketplace, governance module | Third-party integration layer, DAO infrastructure |
+| **Forest** | Cross-chain bridge, agent DAO framework, collective intelligence layer | Multi-chain architecture, autonomous governance |
 
-    services:
-      nomos-api:
-        build: ./infra/docker
-        ports:
-          - "8080:8080"
+---
 
-------------------------------------------------------------------------
-
-# Development Workflow
-
-Typical development flow:
-
-1.  register agent identity
-2.  submit behavioral signals
-3.  compute reputation score
-4.  query reputation profile
-
-Local development:
-
-    ./scripts/dev_setup.sh
-    ./scripts/start_local.sh
-
-------------------------------------------------------------------------
-
-# Future Modules
-
-Planned modules include:
-
--   decentralized dispute resolution
--   agent governance
--   economic reputation staking
--   cross-network reputation portability
-
-------------------------------------------------------------------------
-
-# Conclusion
-
-The Nomos repository architecture is designed to support a scalable
-reputation infrastructure for autonomous agents.
-
-The modular structure allows developers to:
-
--   integrate agents
--   submit behavioral signals
--   compute reputation scores
--   build trust-aware systems in the Web4 AI economy
+<p align="center">
+  <sub>🏗️ Architecture that grows. — Verd.Bud</sub>
+</p>
